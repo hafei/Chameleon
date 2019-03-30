@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chameleon.Web", "Chameleon.Web\Chameleon.Web.csproj", "{F1D2EDB8-6A52-42BC-AF6E-1F8696E9051B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chameleon.Mongo", "Chameleon.Mongo\Chameleon.Mongo.csproj", "{6ADFDB4C-AB98-4893-BC0D-D0F1DBC47270}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chameleon.Mongo", "Chameleon.Mongo\Chameleon.Mongo.csproj", "{6ADFDB4C-AB98-4893-BC0D-D0F1DBC47270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chameleon.Models", "Chameleon.Models\Chameleon.Models.csproj", "{545F61AC-E666-4985-911F-F1BBF02166E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chameleon.Models", "Chameleon.Models\Chameleon.Models.csproj", "{545F61AC-E666-4985-911F-F1BBF02166E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chameleon.Api", "Chameleon.Api\Chameleon.Api.csproj", "{F798D3A8-D6CA-46AB-9DD7-FCD841396C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{545F61AC-E666-4985-911F-F1BBF02166E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545F61AC-E666-4985-911F-F1BBF02166E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545F61AC-E666-4985-911F-F1BBF02166E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F798D3A8-D6CA-46AB-9DD7-FCD841396C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F798D3A8-D6CA-46AB-9DD7-FCD841396C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F798D3A8-D6CA-46AB-9DD7-FCD841396C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F798D3A8-D6CA-46AB-9DD7-FCD841396C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
