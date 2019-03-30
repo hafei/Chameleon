@@ -35,6 +35,8 @@ namespace Chameleon.Web
 
             services.AddMvc()
                 .AddNewtonsoftJson();
+            services.AddIdentityServer()
+                .AddDeveloperSigningCredential();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +67,8 @@ namespace Chameleon.Web
             app.UseCookiePolicy();
 
             app.UseAuthorization();
+
+            //app.UseIdentityServer();
         }
     }
 }
