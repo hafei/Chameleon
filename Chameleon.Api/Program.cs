@@ -22,7 +22,14 @@ namespace Chameleon.Api
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                        .ConfigureLogging((hostingContext, logging) =>
+                        {
+                            logging.AddConsole();
+                            logging.AddDebug();
+                            logging.AddEventSourceLogger();
+                        })
+                        .UseStartup<Startup>();
                 });
     }
 }

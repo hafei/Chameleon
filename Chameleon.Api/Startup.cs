@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.Extensions.Logging.EventSource;
 
 namespace Chameleon.Api
 {
@@ -29,9 +30,16 @@ namespace Chameleon.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<BookService>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddNewtonsoftJson();
 
+            //add logging.
+            //services.AddLogging(logging =>
+            //{
+            //    logging.AddConfiguration(Configuration.GetSection("Logging"));
+            //    logging.AddConsole();
+            //});
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -40,8 +48,10 @@ namespace Chameleon.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
