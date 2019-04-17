@@ -30,6 +30,7 @@ namespace Chameleon.Api.Controllers
             var ipAddress = GetClientIp(HttpContext);
             _logger.LogInformation($"{ipAddress.ToString()} Get books");
             var request = HttpContext.Request;
+            
             return _bookService.Get();
         }
 
